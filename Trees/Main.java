@@ -1,9 +1,8 @@
 package Trees;
 
-import Trees.BalancedTrees.AVLTree;
-import Trees.BalancedTrees.RBTree;
-import Trees.UnbalancedTrees.BST;
-import Trees.UnbalancedTrees.ThreadedBST;
+
+import Trees.UnbalancedTrees.*;
+import Trees.BalancedTrees.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -162,7 +161,57 @@ public class Main {
 
         rbTree.BFS();        
 
+
+
+        //------------------------------------testing B-Tree------------------------------------//
+
+
+        System.out.println("\nB - Tree:");
+        BTree<Integer> bTree = new BTree<>(5);
+        bTree.insert(50);
+        bTree.insert(30);
+        bTree.insert(70);
+        bTree.insert(20);
+        bTree.insert(40);
+        bTree.insert(60);
+        bTree.insert(80);
+        bTree.insert(10);
+        bTree.insert(25);
+        bTree.insert(35);
+        bTree.insert(45);
+        bTree.insert(55);
+        bTree.insert(65);
+        bTree.insert(75);
+        bTree.insert(90);
+        bTree.insert(5);
+        bTree.insert(15);
+        bTree.insert(22);
+        bTree.insert(28);
+        bTree.insert(33);
+        bTree.insert(38);
+        bTree.insert(42);
+        bTree.insert(48);
+
+        bTree.printTree();
+
+        bTree.remove(70);
+        System.out.println();
+        bTree.printTree();     
+
+        bTree.remove(50);
+        System.out.println();
+        bTree.printTree(); 
+
+        bTree.remove(48);
+        System.out.println();
+        bTree.printTree(); 
+
     }
+
+
+    
+
+
 
 }
 
